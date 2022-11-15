@@ -1,0 +1,107 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Disclaimer = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UICorner_2 = Instance.new("UICorner")
+local TextLabel_2 = Instance.new("TextLabel")
+local UICorner_3 = Instance.new("UICorner")
+local Load = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local Cancel = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Disclaimer.Name = "Disclaimer"
+Disclaimer.Parent = ScreenGui
+Disclaimer.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Disclaimer.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Disclaimer.Position = UDim2.new(0.429063767, 0, 0.35061729, 0)
+Disclaimer.Size = UDim2.new(0, 246, 0, 242)
+Disclaimer.Active = true
+Disclaimer.Draggable = true
+Disclaimer.Vis = true
+
+UICorner.Parent = Disclaimer
+
+TextLabel.Parent = Disclaimer
+TextLabel.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+TextLabel.Position = UDim2.new(0.0934959352, 0, 0.05785124, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 207)
+TextLabel.Font = Enum.Font.Unknown
+TextLabel.Text = "Disclaimer"
+TextLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel.TextSize = 30.000
+TextLabel.TextYAlignment = Enum.TextYAlignment.Top
+
+UICorner_2.Parent = TextLabel
+
+TextLabel_2.Parent = Disclaimer
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.Position = UDim2.new(0.199186996, 0, 0.256198347, 0)
+TextLabel_2.Size = UDim2.new(0, 148, 0, 117)
+TextLabel_2.Font = Enum.Font.Arial
+TextLabel_2.Text = "This Gui Is meant for FF2 PRACTICE and is detected in normal FF2"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+UICorner_3.Parent = TextLabel_2
+
+Load.Name = "Load"
+Load.Parent = Disclaimer
+Load.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Load.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Load.Position = UDim2.new(0.121951215, 0, 0.764462709, 0)
+Load.Size = UDim2.new(0, 91, 0, 26)
+Load.Font = Enum.Font.JosefinSans
+Load.Text = "Okay, Load gui"
+Load.TextColor3 = Color3.fromRGB(30, 255, 14)
+Load.TextSize = 10.000
+Load.TextWrapped = true
+
+UICorner_4.Parent = Load
+
+Cancel.Name = "Cancel"
+Cancel.Parent = Disclaimer
+Cancel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Cancel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Cancel.Position = UDim2.new(0.569105685, 0, 0.764462709, 0)
+Cancel.Size = UDim2.new(0, 69, 0, 26)
+Cancel.Font = Enum.Font.JosefinSans
+Cancel.Text = "Cancel"
+Cancel.TextColor3 = Color3.fromRGB(255, 0, 0)
+Cancel.TextSize = 10.000
+Cancel.TextWrapped = true
+
+UICorner_5.Parent = Cancel
+
+-- Scripts:
+
+local function QFJKHK_fake_script() -- Load.LocalScript 
+	local script = Instance.new('LocalScript', Load)
+
+	script.Parent.MouseButton1Down:connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/SkyedCo/FF2PRACTICE/main/Gui",true))()
+		Disclaimer.Visible = false
+	end)
+	
+end
+coroutine.wrap(QFJKHK_fake_script)()
+local function DKRRF_fake_script() -- Cancel.LocalScript 
+	local script = Instance.new('LocalScript', Cancel)
+
+	script.Parent.MouseButton1Down:connect(function()
+		Disclaimer.Visible = false
+	end)
+	
+end
+coroutine.wrap(DKRRF_fake_script)()
